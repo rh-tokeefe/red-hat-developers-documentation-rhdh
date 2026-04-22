@@ -83,7 +83,7 @@ data:
           - ref: sonataflow
       - package: "@redhat/backstage-plugin-scaffolder-backend-module-orchestrator-dynamic@1.8.12"
         disabled: false
-      - package: "@redhat/backstage-plugin-orchestrator-form-widgets@1.8.10"
+      - package: "@redhat/backstage-plugin-orchestrator-form-widgets@1.8.12"
         disabled: false
 ----
 
