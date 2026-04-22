@@ -59,12 +59,12 @@ Update to {product-very-short} 1.9 to use the replacement `@backstage-community/
 [id="breaking-change-rhdhbuhgs-2957"]
 == Existing 1.8.5 Operator users with Orchestator require a manual update in their dynamic-plugins ConfigMap
 
-If you are using an Operator-backed instance of {product-short} with the Orchestrator, you must manually update your `dynamic-plugins` ConfigMap. Once the {product-short} Operator is upgraded to 1.8.6, set the Orchestrator plugin versions to 1.8.12. Failure to update the ConfigMap prevents the {product-short} instance from completing the upgrade process.
+If you are using an Operator-backed instance of {product-short} with the Orchestrator, you must manually update your `dynamic-plugins` ConfigMap. Once the {product-short} Operator is upgraded to 1.8.6, set the Orchestrator plugin versions to {orchestrator-plugin-version}. Failure to update the ConfigMap prevents the {product-short} instance from completing the upgrade process.
 
 .Procedure
-. Update your `dynamic-plugins` ConfigMap to enable the Orchestrator plugins for version 1.8.12.
+. Update your `dynamic-plugins` ConfigMap to enable the Orchestrator plugins for version {orchestrator-plugin-version}.
 +
-[source,yaml]
+[source,yaml,subs="+attributes,+quotes]
 ----
 apiVersion: v1
 kind: ConfigMap
@@ -75,15 +75,15 @@ data:
     includes:
       - dynamic-plugins.default.yaml
     plugins:
-      - package: "@redhat/backstage-plugin-orchestrator@1.8.12"
+      - package: "@redhat/backstage-plugin-orchestrator@{orchestrator-plugin-version}"
         disabled: false
-      - package: "@redhat/backstage-plugin-orchestrator-backend-dynamic@1.8.12"
+      - package: "@redhat/backstage-plugin-orchestrator-backend-dynamic@{orchestrator-plugin-version}"
         disabled: false
         dependencies:
           - ref: sonataflow
-      - package: "@redhat/backstage-plugin-scaffolder-backend-module-orchestrator-dynamic@1.8.12"
+      - package: "@redhat/backstage-plugin-scaffolder-backend-module-orchestrator-dynamic@{orchestrator-plugin-version}"
         disabled: false
-      - package: "@redhat/backstage-plugin-orchestrator-form-widgets@1.8.12"
+      - package: "@redhat/backstage-plugin-orchestrator-form-widgets@{orchestrator-plugin-version}"
         disabled: false
 ----
 
