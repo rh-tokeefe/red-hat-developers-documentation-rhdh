@@ -64,7 +64,7 @@ If you are using an Operator-backed instance of {product-short} with the Orchest
 .Procedure
 . Update your `dynamic-plugins` ConfigMap to enable the Orchestrator plugins for version {orchestrator-plugin-version}.
 +
-[source,yaml,subs="+attributes,+quotes]
+[source,yaml,subs="+attributes,+quotes"]
 ----
 apiVersion: v1
 kind: ConfigMap
