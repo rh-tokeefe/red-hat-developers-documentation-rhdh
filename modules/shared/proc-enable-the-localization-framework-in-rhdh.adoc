@@ -13,6 +13,8 @@ The following languages are supported:
 * French (fr)
 * Italian (it)
 * Japanese (ja)
+* German (de)
+* Spanish (es)
 
 [NOTE]
 ====
