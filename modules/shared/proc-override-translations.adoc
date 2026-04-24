@@ -11,7 +11,7 @@ You can override plugin translation strings without modifying the plugin source 
 * For an Operator-installed {product-very-short} instance, you have installed the {openshift-cli}. For more information about installing `oc`, see {ocp-docs-link}/html/cli_tools/openshift-cli-oc#installing-openshift-cli[Installing the OpenShift CLI].
 
 .Procedure
-. Create a JSON file containing the translation strings that you want to override, as shown in the following example:
+. Create a JSON file containing the translation strings that you want to override, as shown in the following example. You can select French, German, Italian, Japanese or Spanish.
 +
 [id=i18n-enable]
 .`allTranslations.json` fragment with translation string overrides

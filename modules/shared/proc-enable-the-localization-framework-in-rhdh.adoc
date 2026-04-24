@@ -11,9 +11,9 @@ The following languages are supported:
 
 * English (en)
 * French (fr)
+* German (de)
 * Italian (it)
 * Japanese (ja)
-* German (de)
 * Spanish (es)
 
 [NOTE]
@@ -35,8 +35,10 @@ i18n:
   locales: # List of supported locales. Must include `en`, otherwise the translation framework will fail to load.
     - en
     - fr
+    - ge
     - it
     - ja
+    - es
   defaultLocale: en # Optional. Defaults to `en` if not specified.
 ...
 ----
