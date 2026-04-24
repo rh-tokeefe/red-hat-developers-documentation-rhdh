@@ -35,7 +35,7 @@ i18n:
   locales: # List of supported locales. Must include `en`, otherwise the translation framework will fail to load.
     - en
     - fr
-    - ge
+    - de
     - it
     - ja
     - es
