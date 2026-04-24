@@ -1,7 +1,7 @@
 :_mod-docs-content-type: PROCEDURE
 
 [id="install-and-configure-a-third-party-techdocs-add-on_{context}"]
-== Install and configure a third-party TechDocs add-on
+= Install and configure a third-party TechDocs add-on
 
 [role="_abstract"]
 You can install a compatible third-party TechDocs add-on on your {product} instance as a front-end dynamic plugin.

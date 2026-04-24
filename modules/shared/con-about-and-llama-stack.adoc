@@ -1,7 +1,7 @@
 :_mod-docs-content-type: CONCEPT
 
 [id="about-and-llama-stack_{context}"]
-== About {lcs-name} and Llama Stack
+= About {lcs-name} and Llama Stack
 
 [role="_abstract"]
 The {lcs-name} and Llama Stack deploy together as sidecar containers to augment {product-very-short} functionality.
