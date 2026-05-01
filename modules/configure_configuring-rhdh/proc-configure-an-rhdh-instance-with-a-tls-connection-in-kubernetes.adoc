@@ -4,7 +4,7 @@
 = Configure an {product-very-short} instance with a TLS connection in Kubernetes
 
 [role="_abstract"]
-Configure {product-very-short} with a TLS connection in Kubernetes to ensure secure connections with third-party applications and external databases.
+Configure a TLS connection for {product-very-short} in Kubernetes to secure connections with third-party applications and external databases.
 
 include::{docdir}/artifacts/snip-technology-preview.adoc[]
 
