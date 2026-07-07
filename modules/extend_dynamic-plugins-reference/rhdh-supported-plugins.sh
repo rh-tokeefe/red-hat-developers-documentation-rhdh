@@ -17,22 +17,14 @@ red="\033[1;31m"
 orange="\033[1;35m"
 
 QUIET=1; # suppress debug output
-DO_CLEAN=0
 
 BRANCH=main
 SKIP_TABLES=0
 SKIP_COMMUNITY_TABLE=0
 
-rhdhRepo="https://github.com/redhat-developer/rhdh"
 overlaysRepo="https://github.com/redhat-developer/rhdh-plugin-export-overlays"
 
-INDEX_TAG="${BRANCH#release-}"
-if [[ $INDEX_TAG == "main" ]]; then
-  INDEX_TAG="next"
-fi
 CATALOG_INDEX_REGISTRY="${CATALOG_INDEX_REGISTRY:-quay.io/rhdh}"
-
-catalogindextmpdir="/tmp/plugin-catalog-index_${BRANCH}"
 
 debug() {
   if [[ $QUIET -eq 0 ]]; then
@@ -88,7 +80,6 @@ if [[ "$#" -lt 1 ]]; then usage; exit 1; fi
 
 while [[ "$#" -gt 0 ]]; do
   case $1 in
-    '--clean') DO_CLEAN=1;;
     '-b'|'--ref-branch') BRANCH="$2"; shift 1;;        # reference branch, eg., 1.1.x
     '--skip-tables') SKIP_TABLES=1;;
     '--skip-community-table') SKIP_COMMUNITY_TABLE=1;;
@@ -100,6 +91,13 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [[ ! $BRANCH ]]; then usage; exit 1; fi
+
+catalogindextmpdir="/tmp/plugin-catalog-index_${BRANCH}"
+
+INDEX_TAG="${BRANCH#release-}"
+if [[ $INDEX_TAG == "main" ]]; then
+  INDEX_TAG="next"
+fi
 
 # Set temp directory paths based on BRANCH
 overlaystmpdir="/tmp/rhdh-plugin-export-overlays_$BRANCH" # for catalog metadata
@@ -134,7 +132,6 @@ fetch_catalog_index() {
     tar xf "$unpack/$layer" -C "$catalogindextmpdir"
   done
   rm -rf "$unpack" "$archive"
-  exit 0
 }
 
 generate_dynamic_plugins_table() {
@@ -147,7 +144,7 @@ generate_dynamic_plugins_table() {
     ref-technology-preview-plugins.adoc
     rhdh-supported-plugins.csv
   )
-  ls ${catalogindextmpdir}
+  ls "${catalogindextmpdir}"
   if [[ ! -d "$src" ]]; then
     echo -e "${red}[ERROR] Missing directory in catalog index image: $src${norm}" >&2
     exit 1
