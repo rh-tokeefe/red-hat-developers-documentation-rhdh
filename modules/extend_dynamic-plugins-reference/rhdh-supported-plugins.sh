@@ -250,7 +250,7 @@ generate_community_table() {
             Required_Variables=$(get_required_variables "$metadata_file")
 
             # Skip if not a community plugin or no dynamic artifact
-            [[ "$support" != "community" ]] && continue
+            [[ "$support" != "community" && "$support" != "dev-preview" ]] && continue
             [[ -z "$dynamic_artifact" || "$dynamic_artifact" == "null" ]] && continue
             [[ "$dynamic_artifact" != "oci://ghcr.io"* ]] && continue
 
@@ -295,8 +295,8 @@ generate_community_table() {
     # LC_ALL=C sort the community table by plugin title and format for adoc
     COMMUNITY_TABLE_SORTED="/tmp/community_table_sorted_${BRANCH}.txt"
     if [[ -f "$COMMUNITY_TABLE_FILE" ]]; then
-        LC_ALL=C sort -t '|' -k1,1 "$COMMUNITY_TABLE_FILE" | while IFS='||' read -r key content; do
-            echo -e "$content\n" >> "$COMMUNITY_TABLE_SORTED"
+        LC_ALL=C sort -t '|' -k1,1 "$COMMUNITY_TABLE_FILE" | while read -r line; do
+            echo -e "${line#*||}\n" >> "$COMMUNITY_TABLE_SORTED"
         done
     fi
 
