@@ -35,6 +35,9 @@ plugins:
                   if:
                     allOf:
                       - isKind: component
+            dynamicRoutes:
+              - path: /scorecard/aggregations/:aggregationId/metrics/:metricId
+                importName: ScorecardPage
   - package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/red-hat-developer-hub-backstage-plugin-scorecard-backend:<tag>
     disabled: false
 ----
