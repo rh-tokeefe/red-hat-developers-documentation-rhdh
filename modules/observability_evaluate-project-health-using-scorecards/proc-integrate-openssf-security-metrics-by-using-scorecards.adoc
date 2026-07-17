@@ -46,7 +46,9 @@ spec:
 +
 where:
 
-`annotations:openssf/scorecard-location`:: Specifies the full URL to the OpenSSF Scorecard API endpoint for the repository. The URL must start with `https://`.
+`_<owner>_`:: The GitHub organization or user account that owns the repository, for example, `ossf` or `kubernetes`.
+`_<repository>_`:: The name of the GitHub repository, for example, `scorecard` or `kubernetes`.
+`annotations:openssf/scorecard-location`:: Specifies the full URL to the OpenSSF Scorecard API endpoint for the repository. The URL must start with `https://`. For example, `\https://api.securityscorecards.dev/projects/github.com/ossf/scorecard`.
 `spec:owner`:: Specifies your team name.
 +
 [NOTE]
@@ -61,7 +63,7 @@ For organizations running a self-hosted OpenSSF Scorecard instance, replace `api
 catalog:
   locations:
     - type: url
-      target: https://github.com/<owner>/<repository>/catalog-info.yaml
+      target: https://github.com/_<owner>_/_<repository>_/catalog-info.yaml
 ----
 
 [NOTE]
