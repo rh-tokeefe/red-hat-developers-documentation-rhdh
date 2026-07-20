@@ -17,7 +17,7 @@ You can configure the Dependabot Scorecard module to display GitHub Dependabot a
 
 .Procedure
 
-. Enable the Dependabot Scorecard module: Add the following configuration to your {product-very-short} `dynamic-plugins-config.yaml` file:
+. Add the following configuration to your {product-very-short} `dynamic-plugins-config.yaml` file to enable the Dependabot Scorecard module:
 +
 [source,yaml]
 ----
@@ -28,7 +28,7 @@ plugins:
 +
 include::{docdir}/artifacts/snip-tag-for-OCI-package-paths.adoc[]
 
-. Annotate catalog entities: Link a component to the Dependabot data source by editing the `catalog-info.yaml` file for your {product-very-short} entity and adding the required annotations as shown in the following code:
+. Edit the `catalog-info.yaml` file for your {product-very-short} entity to link a component to the Dependabot data source by adding the required annotations as shown in the following code:
 +
 [source,yaml,subs="+quotes"]
 ----
@@ -53,7 +53,7 @@ where:
 `annotations:github.com/dependabot`:: Enables Dependabot alert collection for the entity. The value must be the exact string `'true'`.
 `spec:owner`:: Specifies your team name.
 
-. Ingest the catalog entity: Add the location of your `catalog-info.yaml` to the `catalog.locations` section in your {product-very-short} `{my-app-config-file}` file:
+. Add the location of your `catalog-info.yaml` to the `catalog.locations` section in your {product-very-short} `{my-app-config-file}` file to ingest the catalog entity:
 +
 [source,yaml,subs="+quotes"]
 ----
@@ -63,7 +63,7 @@ catalog:
       target: https://github.com/_<owner>_/_<repository>_/catalog-info.yaml
 ----
 
-. Optional: Customize thresholds: Define custom threshold rules for the Dependabot alert metrics in your {product-very-short} `{my-app-config-file}` file:
+. Optional: Define custom threshold rules for the Dependabot alert metrics in your {product-very-short} `{my-app-config-file}` file:
 +
 [source,yaml]
 ----
