@@ -90,9 +90,13 @@ where:
 ====
 Dependabot metrics use the following default thresholds for all four severity levels:
 
-* *Error*: More than 7 open alerts.
-* *Warning*: Between 1 and 7 open alerts.
 * *Success*: Fewer than 1 open alert.
+* *Warning*: Between 1 and 7 open alerts.
+* *Error*: More than 7 open alerts.
 
 You can customize these thresholds in your {product-very-short} `{my-app-config-file}` file. For more information, see xref:scorecard-metric-thresholds_evaluate-project-health-using-scorecards[Scorecard metric thresholds].
 ====
+
+.Verification
+
+* In your {product-very-short} application, navigate to the catalog page for your component and confirm that the Dependabot metrics are displayed in the Scorecard view.

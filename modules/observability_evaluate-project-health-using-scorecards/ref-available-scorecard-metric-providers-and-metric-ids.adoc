@@ -136,25 +136,25 @@ The following metric providers are supported:
 | `dependabot.alerts_critical`
 | Critical Dependabot alerts
 | Number of open critical-severity Dependabot alerts.
-| number (0-9)
+| number
 
 | Dependabot
 | `dependabot.alerts_high`
 | High Dependabot alerts
 | Number of open high-severity Dependabot alerts.
-| number (0-9)
+| number
 
 | Dependabot
 | `dependabot.alerts_medium`
 | Medium Dependabot alerts
 | Number of open medium-severity Dependabot alerts.
-| number (0-9)
+| number
 
 | Dependabot
 | `dependabot.alerts_low`
 | Low Dependabot alerts
 | Number of open low-severity Dependabot alerts.
-| number (0-9)
+| number
 
 | Filecheck
 | `filecheck._<key>_`
