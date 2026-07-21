@@ -51,7 +51,7 @@ where:
 `_<repository>_`:: Specifies the name of the GitHub repository.
 `annotations:github.com/project-slug`:: Specifies the GitHub repository in `owner/repository` format.
 `annotations:github.com/dependabot`:: Enables Dependabot alert collection for the entity. The value must be the exact string `'true'`.
-`spec:owner`:: Specifies your team or user name.
+`spec:owner`:: Specifies your team name or username.
 
 . Add the location of your `catalog-info.yaml` to the `catalog.locations` section in your {product-very-short} `{my-app-config-file}` file to ingest the catalog entity:
 +
