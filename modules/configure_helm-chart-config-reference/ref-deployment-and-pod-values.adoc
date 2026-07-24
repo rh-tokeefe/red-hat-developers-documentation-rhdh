@@ -71,7 +71,7 @@ a|The name of the service account to use. If not set and `create` is `true`, a n
 |{}
 
 |containerSecurityContext
-|Security context for the main {product-very-short} container (not the Lightspeed sidecar or init containers).
+|Security context for the main {product-very-short} container (not the {ls-brand-name} sidecar or init containers).
 |object
 e|See child keys
 

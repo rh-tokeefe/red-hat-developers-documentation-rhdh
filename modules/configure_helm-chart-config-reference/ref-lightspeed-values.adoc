@@ -1,7 +1,7 @@
 :_mod-docs-content-type: REFERENCE
 
 [id="lightspeed-values_{context}"]
-= Lightspeed values
+= {ls-brand-name} values
 
 [role="_abstract"]
 You can configure {ls-brand-name}, the AI assistant, as a first-class feature of your {product-very-short} instance, including the dynamic plugins, configuration files, Retrieval-Augmented Generation (RAG) init container, and core sidecar.
@@ -11,27 +11,27 @@ You can configure {ls-brand-name}, the AI assistant, as a first-class feature of
 d|*Key* |*Description* |*Type* d|*Default*
 
 |lightspeed
-|Lightspeed AI assistant configuration.
+|{ls-brand-name} AI assistant configuration.
 |object
 e|See child keys
 
 |lightspeed.enabled
-|Enable Lightspeed.
+|Enable {ls-brand-name}.
 |boolean
 |true
 
 |lightspeed.plugins
-|Dynamic plugin definitions for Lightspeed. Default includes the front-end and back-end plugins from `registry.access.redhat.com`.
+|Dynamic plugin definitions for {ls-brand-name}. Default includes the front-end and back-end plugins from `registry.access.redhat.com`.
 |list
 e|See description
 
 |lightspeed.config
-|Configuration files for Lightspeed.
+|Configuration files for {ls-brand-name}.
 |object
 e|See child keys
 
 |lightspeed.config.stack.existingConfigMap.name
-|Name of an existing ConfigMap containing the Lightspeed stack configuration.
+|Name of an existing ConfigMap containing the {ls-brand-name} stack configuration.
 |string
 |""
 
@@ -41,7 +41,7 @@ e|See child keys
 |""
 
 |lightspeed.config.server.existingConfigMap.name
-|Name of an existing ConfigMap containing the Lightspeed server configuration.
+|Name of an existing ConfigMap containing the {ls-brand-name} server configuration.
 |string
 |""
 
@@ -51,7 +51,7 @@ e|See child keys
 |""
 
 |lightspeed.config.profile.existingConfigMap.name
-|Name of an existing ConfigMap containing the Lightspeed profile configuration.
+|Name of an existing ConfigMap containing the {ls-brand-name} profile configuration.
 |string
 |""
 
@@ -61,12 +61,12 @@ e|See child keys
 |""
 
 |lightspeed.existingSecret
-|Name of an existing Secret containing the Lightspeed credentials.
+|Name of an existing Secret containing the {ls-brand-name} credentials.
 |string
 |""
 
 |lightspeed.runtimeVolume
-|Volume for the Lightspeed runtime data.
+|Volume for the {ls-brand-name} runtime data.
 |object
 e|See child keys
 
@@ -151,7 +151,7 @@ a|Security context. Default: readOnlyRootFilesystem=true, allowPrivilegeEscalati
 e|See description
 
 |lightspeed.core
-|Lightspeed core sidecar container configuration.
+|{ls-brand-name} core sidecar container configuration.
 |object
 e|See child keys
 
