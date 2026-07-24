@@ -22,7 +22,7 @@ The values are organized into the following categories:
 * OpenShift
 * Database
 * Metrics
-* Lightspeed
+* {ls-brand-name}
 * Orchestrator
 * Test
 
