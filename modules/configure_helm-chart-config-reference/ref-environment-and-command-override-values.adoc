@@ -8,7 +8,7 @@ You can override the default container command, arguments, and environment varia
 
 [IMPORTANT]
 ====
-The `*Override` keys replace system defaults entirely. When you use `envOverride`, system-injected environment variables such as `BACKEND_SECRET` and database credentials are not added automatically. Use the `extra*` keys to add values without replacing the defaults.
+The override keys (for example, `commandOverride` and `envOverride`) replace system defaults entirely. When you use an override key, system-injected environment variables such as `BACKEND_SECRET` and database credentials are not added automatically. Use the extra keys (for example, `extraEnv` and `extraArgs`) to add values without replacing the defaults.
 ====
 
 [cols="1m, 1, 1, 1m"]
